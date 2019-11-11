@@ -4,6 +4,7 @@
   "description": "WebRTC Server for Video Calls",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/reinkepatrick/webrtc-server/issues"
   },
-  "homepage": "https://github.com/reinkepatrick/webrtc-server#readme"
+  "homepage": "https://github.com/reinkepatrick/webrtc-server#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "socket.io": "^2.3.0"
+  }
 }
