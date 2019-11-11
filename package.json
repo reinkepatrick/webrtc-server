@@ -1,0 +1,19 @@
+{
+  "name": "webrtc-server",
+  "version": "1.0.0",
+  "description": "WebRTC Server for Video Calls",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reinkepatrick/webrtc-server.git"
+  },
+  "author": "Patrick Reinke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reinkepatrick/webrtc-server/issues"
+  },
+  "homepage": "https://github.com/reinkepatrick/webrtc-server#readme"
+}
