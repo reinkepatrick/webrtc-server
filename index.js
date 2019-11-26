@@ -21,8 +21,19 @@ io.on('connection', client => {
         });
     });
 
-    client.on('setDescription', (desc) => {
-        client.broadcast.emit('remoteDescription', desc);
+    client.on('setDescription', (data) => {
+        console.log(data);
+        if (data.desc) {
+            io.to(data.to).emit('remoteDescription', {
+                from: client.id,
+                desc: data.desc,
+            });
+        } else if (data.candidate) {
+            io.to(data.to).emit('remoteDescription', {
+                from: client.id,
+                candidate: data.candidate,
+            });
+        }
     });
 
     client.on('disconnect', () => { 
