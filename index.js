@@ -21,8 +21,7 @@ io.on('connection', client => {
         });
     });
 
-    client.on('setDescription', (data) => {
-        console.log(data);
+    client.on('setDescription', data => {
         if (data.desc) {
             io.to(data.to).emit('remoteDescription', {
                 from: client.id,
@@ -32,6 +31,21 @@ io.on('connection', client => {
             io.to(data.to).emit('remoteDescription', {
                 from: client.id,
                 candidate: data.candidate,
+            });
+        }
+    });
+
+    client.on('call', data => {
+        console.log(data);
+        if (data.offer) {
+            io.to(data.to).emit('call', {
+                from: client.id,
+                offer: data.offer
+            });
+        } else if (data.accepted !== undefined) {
+            io.to(data.to).emit('call', {
+                from: client.id,
+                accepted: data.accepted
             });
         }
     });
