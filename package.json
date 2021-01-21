@@ -19,6 +19,6 @@
   "homepage": "https://github.com/reinkepatrick/webrtc-server#readme",
   "dependencies": {
     "nodemon": "^1.19.4",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   }
 }
